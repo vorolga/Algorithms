@@ -90,16 +90,7 @@ int main() {
     std::cout << std::endl;
     std::cout << std::endl;
 
-    IGraph* graphMatrix = new MatrixGraph(9);
-    graphMatrix->AddEdge(0, 1);
-    graphMatrix->AddEdge(1, 2);
-    graphMatrix->AddEdge(1, 5);
-    graphMatrix->AddEdge(2, 3);
-    graphMatrix->AddEdge(3, 4);
-    graphMatrix->AddEdge(4, 2);
-    graphMatrix->AddEdge(6, 0);
-    graphMatrix->AddEdge(0, 7);
-    graphMatrix->AddEdge(0, 8);
+    IGraph* graphMatrix = new MatrixGraph(*graphList);
 
     std::cout << "---MatrixGraph---"<< std::endl;
     std::cout << "---DFS---"<< std::endl;
@@ -117,16 +108,7 @@ int main() {
     std::cout << std::endl;
     std::cout << std::endl;
 
-    IGraph* graphSet = new SetGraph(9);
-    graphSet->AddEdge(0, 1);
-    graphSet->AddEdge(1, 2);
-    graphSet->AddEdge(1, 5);
-    graphSet->AddEdge(2, 3);
-    graphSet->AddEdge(3, 4);
-    graphSet->AddEdge(4, 2);
-    graphSet->AddEdge(6, 0);
-    graphSet->AddEdge(0, 7);
-    graphSet->AddEdge(0, 8);
+    IGraph* graphSet = new SetGraph(*graphMatrix);
 
     std::cout << "---SetGraph---"<< std::endl;
     std::cout << "---DFS---"<< std::endl;
@@ -144,16 +126,7 @@ int main() {
     std::cout << std::endl;
     std::cout << std::endl;
 
-    IGraph* graphArc = new ArcGraph(9);
-    graphArc->AddEdge(0, 1);
-    graphArc->AddEdge(1, 2);
-    graphArc->AddEdge(1, 5);
-    graphArc->AddEdge(2, 3);
-    graphArc->AddEdge(3, 4);
-    graphArc->AddEdge(4, 2);
-    graphArc->AddEdge(6, 0);
-    graphArc->AddEdge(0, 7);
-    graphArc->AddEdge(0, 8);
+    IGraph* graphArc = new ArcGraph(*graphSet);
 
     std::cout << "---ArcGraph---"<< std::endl;
     std::cout << "---DFS---"<< std::endl;

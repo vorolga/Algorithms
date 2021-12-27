@@ -20,7 +20,7 @@ MatrixGraph::MatrixGraph(const IGraph &graph) {
             vertices[i][j] = 0;
         }
 
-        std::vector<int> nextVartices(i);
+        std::vector<int> nextVartices = graph.GetNextVertices(i);
         for (size_t j : nextVartices) {
             vertices[i][j] = 1;
         }

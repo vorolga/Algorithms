@@ -9,6 +9,8 @@ SetGraph::SetGraph(int vertices_count) {
 }
 
 SetGraph::SetGraph(const IGraph &graph) {
+    vertices.resize(graph.VerticesCount());
+
     for (size_t i = 0; i < graph.VerticesCount(); ++i) {
         std::vector<int> nextVertices = graph.GetNextVertices(i);
 
